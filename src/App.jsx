@@ -229,10 +229,10 @@ function App() {
           // Convert to grayscale
           const gray = 0.3 * r + 0.59 * g + 0.11 * b;
           
-          // Apply sepia and contrast
-          const sepiaR = gray * 1.1;
+          // Apply very subtle warm tone to black and white
+          const sepiaR = gray * 1.05;
           const sepiaG = gray * 1.0;
-          const sepiaB = gray * 0.9;
+          const sepiaB = gray * 0.95;
           
           data[j] = Math.min(255, sepiaR);
           data[j + 1] = Math.min(255, sepiaG);
