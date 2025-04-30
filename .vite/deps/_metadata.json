@@ -1,0 +1,85 @@
+{
+  "hash": "999e1abc",
+  "configHash": "d51cb5c2",
+  "lockfileHash": "1c88f504",
+  "browserHash": "8814e969",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "7ebd7b9b",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "afb33b4a",
+      "needsInterop": true
+    },
+    "react-webcam": {
+      "src": "../../node_modules/react-webcam/dist/react-webcam.js",
+      "file": "react-webcam.js",
+      "fileHash": "c44f9724",
+      "needsInterop": true
+    },
+    "html2canvas": {
+      "src": "../../node_modules/html2canvas/dist/html2canvas.esm.js",
+      "file": "html2canvas.js",
+      "fileHash": "65226d73",
+      "needsInterop": false
+    },
+    "@mui/material/styles": {
+      "src": "../../node_modules/@mui/material/esm/styles/index.js",
+      "file": "@mui_material_styles.js",
+      "fileHash": "26062de6",
+      "needsInterop": false
+    },
+    "@mui/material": {
+      "src": "../../node_modules/@mui/material/esm/index.js",
+      "file": "@mui_material.js",
+      "fileHash": "5c370d4b",
+      "needsInterop": false
+    },
+    "@mui/icons-material/CameraAlt": {
+      "src": "../../node_modules/@mui/icons-material/esm/CameraAlt.js",
+      "file": "@mui_icons-material_CameraAlt.js",
+      "fileHash": "74b530d2",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Download": {
+      "src": "../../node_modules/@mui/icons-material/esm/Download.js",
+      "file": "@mui_icons-material_Download.js",
+      "fileHash": "d6fe632c",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Replay": {
+      "src": "../../node_modules/@mui/icons-material/esm/Replay.js",
+      "file": "@mui_icons-material_Replay.js",
+      "fileHash": "ad22cb35",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-OAZAAUMI": {
+      "file": "chunk-OAZAAUMI.js"
+    },
+    "chunk-T5IZDAGC": {
+      "file": "chunk-T5IZDAGC.js"
+    },
+    "chunk-C6WWHQR7": {
+      "file": "chunk-C6WWHQR7.js"
+    },
+    "chunk-E5VZOMQ3": {
+      "file": "chunk-E5VZOMQ3.js"
+    },
+    "chunk-WYJ2VKSK": {
+      "file": "chunk-WYJ2VKSK.js"
+    },
+    "chunk-6GAV2S6I": {
+      "file": "chunk-6GAV2S6I.js"
+    },
+    "chunk-DC5AMYBS": {
+      "file": "chunk-DC5AMYBS.js"
+    }
+  }
+}
