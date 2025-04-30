@@ -179,7 +179,7 @@ function App() {
     setIsCapturing(false);
   };
 
-  const downloadPhotoStrip = async () => {
+  const downloadPhotoStrip = () => {
     const stripElement = document.getElementById('photo-strip');
     if (stripElement) {
       const STRIP_WIDTH = 320;
@@ -212,11 +212,34 @@ function App() {
         tempCanvas.height = PHOTO_SIZE * 2;
         const tempCtx = tempCanvas.getContext('2d');
         
-        // Draw and process the photo
-        tempCtx.filter = bwFilter;
+        // Draw the photo first
         tempCtx.scale(-1, 1); // Mirror
         tempCtx.translate(-PHOTO_SIZE * 2, 0);
         tempCtx.drawImage(photoElements[i], 0, 0, PHOTO_SIZE * 2, PHOTO_SIZE * 2);
+        
+        // Apply black and white effect using pixel manipulation
+        const imageData = tempCtx.getImageData(0, 0, PHOTO_SIZE * 2, PHOTO_SIZE * 2);
+        const data = imageData.data;
+        
+        for (let j = 0; j < data.length; j += 4) {
+          const r = data[j];
+          const g = data[j + 1];
+          const b = data[j + 2];
+          
+          // Convert to grayscale
+          const gray = 0.3 * r + 0.59 * g + 0.11 * b;
+          
+          // Apply sepia and contrast
+          const sepiaR = gray * 1.1;
+          const sepiaG = gray * 1.0;
+          const sepiaB = gray * 0.9;
+          
+          data[j] = Math.min(255, sepiaR);
+          data[j + 1] = Math.min(255, sepiaG);
+          data[j + 2] = Math.min(255, sepiaB);
+        }
+        
+        tempCtx.putImageData(imageData, 0, 0);
         
         // Draw the processed photo onto main canvas
         ctx.drawImage(
